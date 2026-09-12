@@ -1,0 +1,393 @@
+/* ==================================================
+   WORK PAGE — page-specific styles
+   Shared styles (navbar, hero, buttons, section-title,
+   section-tag, section-space, strength-card, project-tags,
+   footer, etc.) live in css/header.css and are reused here.
+   ================================================== */
+
+.work-hero {
+  padding-top: 24px;
+  padding-bottom: 20px;
+}
+
+/* ============ FILTER BAR ============ */
+.work-filter-bar {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.6rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.filter-btn {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.75);
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: rgba(159, 232, 234, 0.12);
+  border-color: rgba(159, 232, 234, 0.28);
+  color: #fff;
+}
+
+.filter-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ============ IMAGE PLACEHOLDERS ============ */
+.project-thumb-placeholder {
+  position: relative;
+  height: 100%;
+  min-height: 220px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(135deg, rgba(159, 232, 234, 0.1), rgba(255, 255, 255, 0.03));
+  overflow: hidden;
+}
+
+.project-thumb-placeholder.thumb-featured {
+  min-height: 340px;
+  border-radius: 24px;
+}
+
+.thumb-grad-1 { background: linear-gradient(135deg, rgba(159, 232, 234, 0.12), rgba(255, 255, 255, 0.02)); }
+.thumb-grad-2 { background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(159, 232, 234, 0.1)); }
+.thumb-grad-3 { background: linear-gradient(135deg, rgba(159, 232, 234, 0.08), rgba(255, 255, 255, 0.04)); }
+.thumb-grad-4 { background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(159, 232, 234, 0.14)); }
+
+.thumb-name {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.thumb-caption {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.75rem;
+}
+
+.project-thumb-img {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+/* ============ PROJECT STATUS ============ */
+.project-status {
+  display: inline-block;
+  margin: 0.6rem 0 0.4rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.status-website {
+  background: rgba(159, 232, 234, 0.1);
+  color: var(--accent);
+}
+
+.status-completed {
+  background: rgba(159, 232, 234, 0.1);
+  color: var(--accent);
+}
+
+.status-academic {
+  background: rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.status-development {
+  background: rgba(255, 196, 120, 0.12);
+  color: #f0c48a;
+}
+
+/* ============ FEATURED PROJECT ============ */
+.featured-project {
+  padding: 1.75rem;
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.18);
+}
+
+.featured-project-body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5rem 0.25rem;
+}
+
+.featured-title {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0.5rem 0 0.9rem;
+}
+
+.featured-desc {
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 0.75rem;
+}
+
+.featured-category {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* ============ SHARED INCLUDES LIST (this page only) ============ */
+.plan-includes {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+  line-height: 1.9;
+}
+
+.plan-includes li {
+  padding-left: 1.4rem;
+  position: relative;
+}
+
+.plan-includes li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.plan-includes.compact {
+  font-size: 0.85rem;
+  line-height: 1.75;
+}
+
+/* ============ PROJECT GRID ============ */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 22px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(159, 232, 234, 0.25);
+  box-shadow: 0 26px 60px rgba(10, 10, 12, 0.28);
+}
+
+.work-card:hover .project-thumb-img {
+  transform: scale(1.02);
+}
+
+.work-card .project-thumb-placeholder,
+.work-card .project-thumb-img {
+  border-radius: 0;
+}
+
+.work-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.4rem;
+}
+
+.work-card-body h3 {
+  color: #fff;
+  font-size: 1.15rem;
+  margin: 0 0 0.4rem;
+}
+
+.work-card-body p {
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0 0 0.5rem;
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.work-card-meta {
+  color: var(--accent);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Hidden filtered-out cards do not occupy layout space */
+.work-item.is-hidden {
+  display: none;
+}
+
+.work-empty-state {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 2rem;
+}
+
+/* ============ TOOLS & TECHNOLOGIES ============ */
+.tech-group {
+  height: 100%;
+  padding: 1.4rem 1.2rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tech-group h5 {
+  color: #fff;
+  font-size: 0.95rem;
+  margin-bottom: 0.85rem;
+}
+
+.tech-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.85rem;
+  line-height: 1.9;
+}
+
+.tech-group ul li::before {
+  content: "\2014 ";
+  color: rgba(159, 232, 234, 0.7);
+}
+
+/* ============ REDUCED MOTION ============ */
+@media (prefers-reduced-motion: reduce) {
+  .work-card,
+  .project-thumb-img,
+  .filter-btn {
+    transition: none !important;
+  }
+
+  .work-card:hover {
+    transform: none;
+  }
+}
+
+/* ==================================================
+   RESPONSIVE
+   ================================================== */
+
+@media (max-width: 991.98px) {
+  .featured-project {
+    padding: 1.4rem;
+    border-radius: 22px;
+  }
+
+  .featured-title {
+    font-size: 1.7rem;
+  }
+
+  .project-thumb-placeholder.thumb-featured {
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-filter-bar {
+    gap: 0.45rem;
+    padding: 0.5rem;
+  }
+
+  .filter-btn {
+    font-size: 0.78rem;
+    padding: 0.55rem 0.85rem;
+  }
+
+  .featured-project {
+    padding: 1.1rem;
+  }
+
+  .featured-title {
+    font-size: 1.5rem;
+  }
+
+  .featured-desc,
+  .featured-category {
+    font-size: 0.92rem;
+  }
+
+  .project-thumb-placeholder.thumb-featured {
+    min-height: 220px;
+    border-radius: 18px;
+  }
+
+  .project-thumb-placeholder {
+    min-height: 170px;
+    border-radius: 16px;
+  }
+
+  .work-card-body {
+    padding: 1.2rem;
+  }
+
+  .work-card-body h3 {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .work-filter-bar {
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .filter-btn {
+    flex: 0 0 auto;
+  }
+
+  .featured-project {
+    padding: 0.9rem;
+    border-radius: 18px;
+  }
+
+  .thumb-name {
+    font-size: 0.95rem;
+  }
+}

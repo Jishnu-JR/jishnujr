@@ -1,0 +1,416 @@
+.contact-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 112px 0 84px;
+  background:
+    radial-gradient(circle at 82% 8%, rgba(159, 232, 234, 0.11), transparent 25%),
+    linear-gradient(135deg, #090b0d 0%, #121719 52%, #191d20 100%);
+}
+
+.contact-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(148, 163, 184, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(135deg, black, transparent 75%);
+}
+
+.contact-hero-content,
+.contact-section > .container,
+.next-steps-section > .container,
+.direct-contact-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-hero-content {
+  max-width: 760px;
+}
+
+.contact-hero h1 {
+  max-width: 700px;
+  margin: 1.2rem 0 1.1rem;
+  color: #fff;
+  font-size: clamp(2.5rem, 6vw, 4.8rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.contact-hero p,
+.contact-intro > p,
+.form-heading p,
+.next-step p {
+  color: var(--text-soft);
+}
+
+.contact-hero p {
+  max-width: 650px;
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.contact-section {
+  padding: 96px 0;
+  background: #0d0f11;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(2.5rem, 7vw, 7rem);
+  align-items: start;
+}
+
+.contact-intro {
+  padding-top: 0.75rem;
+}
+
+.contact-intro h2,
+.next-steps-heading h2,
+.direct-contact-content h2 {
+  margin: 1rem 0 0.8rem;
+  color: #fff;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.contact-intro > p {
+  max-width: 420px;
+  margin-bottom: 2.5rem;
+}
+
+.contact-info-list {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.contact-info-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.contact-info-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  border: 1px solid rgba(159, 232, 234, 0.22);
+  border-radius: 12px;
+  color: var(--accent);
+  background: rgba(159, 232, 234, 0.06);
+  font-size: 1.2rem;
+}
+
+.contact-info-item h3,
+.contact-info-item p {
+  margin: 0;
+}
+
+.contact-info-item h3 {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.contact-info-item a,
+.contact-info-item p {
+  color: var(--text-soft);
+}
+
+.contact-info-item a {
+  display: inline-block;
+  margin-top: 0.2rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact-info-item a:hover,
+.contact-info-item a:focus-visible,
+.direct-email:hover,
+.direct-email:focus-visible {
+  color: #fff;
+}
+
+.contact-info-item p {
+  margin-top: 0.2rem;
+  font-size: 0.88rem;
+}
+
+.contact-form-wrapper {
+  padding: clamp(1.5rem, 4vw, 2.75rem);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+}
+
+.form-kicker {
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.form-heading h2 {
+  margin: 0.45rem 0 0.35rem;
+  color: #fff;
+  font-size: clamp(1.6rem, 3vw, 2.15rem);
+}
+
+.form-heading p {
+  margin-bottom: 2rem;
+  font-size: 0.93rem;
+}
+
+.form-row-group {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.form-group label span[aria-hidden="true"] {
+  color: var(--accent);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.045);
+  color: #fff;
+  font: inherit;
+  font-size: 0.93rem;
+  line-height: 1.5;
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input,
+.form-group select {
+  min-height: 48px;
+  padding: 0.75rem 0.9rem;
+}
+
+.form-group textarea {
+  min-height: 130px;
+  padding: 0.8rem 0.9rem;
+  resize: vertical;
+}
+
+.form-group select {
+  appearance: none;
+  padding-right: 2.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%239fe8ea' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+}
+
+.form-group select option {
+  color: #fff;
+  background: #0d0f11;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  background-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 3px rgba(159, 232, 234, 0.12);
+}
+
+.form-group [aria-invalid="true"] {
+  border-color: #ff9a9a;
+}
+
+.field-error {
+  display: block;
+  min-height: 1.25rem;
+  margin-top: 0.3rem;
+  color: #ffb4b4;
+  font-size: 0.78rem;
+}
+
+.btn-submit {
+  width: 100%;
+  min-height: 50px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #0b0d0f;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-submit:hover,
+.btn-submit:focus-visible {
+  background: #b9f2f3;
+  color: #0b0d0f;
+  box-shadow: 0 10px 25px rgba(159, 232, 234, 0.2);
+  transform: translateY(-2px);
+}
+
+.btn-submit:disabled {
+  cursor: wait;
+  opacity: 0.65;
+  transform: none;
+}
+
+.form-reassurance {
+  margin: 0.85rem 0 0;
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.form-message {
+  display: none;
+  margin-top: 1.2rem;
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  font-size: 0.88rem;
+}
+
+.form-message.error,
+.form-message.notice,
+.form-message.success {
+  display: block;
+}
+
+.form-message.error {
+  border: 1px solid rgba(255, 154, 154, 0.35);
+  color: #ffb4b4;
+  background: rgba(255, 100, 100, 0.1);
+}
+
+.form-message.notice {
+  border: 1px solid rgba(159, 232, 234, 0.25);
+  color: #c7f5f6;
+  background: rgba(159, 232, 234, 0.08);
+}
+
+.form-message.success {
+  border: 1px solid rgba(122, 226, 164, 0.3);
+  color: #a7edbe;
+  background: rgba(80, 190, 120, 0.1);
+}
+
+.next-steps-section {
+  padding: 88px 0;
+  background: linear-gradient(180deg, #111517 0%, #0d0f11 100%);
+}
+
+.next-steps-heading {
+  margin-bottom: 2.5rem;
+}
+
+.next-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.next-step {
+  padding: 1.8rem 1.5rem 1.5rem 0;
+}
+
+.next-step + .next-step {
+  padding-left: 1.5rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.next-step span {
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.next-step h3 {
+  margin: 1rem 0 0.4rem;
+  color: #fff;
+  font-size: 1.15rem;
+}
+
+.next-step p {
+  max-width: 260px;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.direct-contact-section {
+  padding: 76px 0 96px;
+  text-align: center;
+  background: #0d0f11;
+}
+
+.direct-email {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--accent);
+  font-size: clamp(1.2rem, 3vw, 1.65rem);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .contact-hero {
+    padding: 88px 0 64px;
+  }
+
+  .contact-section,
+  .next-steps-section {
+    padding: 64px 0;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .form-row-group,
+  .next-steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .next-step,
+  .next-step + .next-step {
+    padding: 1.4rem 0;
+    border-left: 0;
+  }
+
+  .next-step + .next-step {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .direct-contact-section {
+    padding: 56px 0 72px;
+  }
+}
